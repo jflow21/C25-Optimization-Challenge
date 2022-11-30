@@ -5,7 +5,7 @@ DocMeta.setdocmeta!(C25OptimizationChallenge, :DocTestSetup, :(using C25Optimiza
 
 makedocs(;
     modules=[C25OptimizationChallenge],
-    authors="jacksonflowers <flowersj@mit.edu> and contributors",
+    authors="jflow21 <57278663+jflow21@users.noreply.github.com> and contributors",
     repo="https://github.com/jflow21/C25OptimizationChallenge.jl/blob/{commit}{path}#{line}",
     sitename="C25OptimizationChallenge.jl",
     format=Documenter.HTML(;
