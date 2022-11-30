@@ -1,4 +1,4 @@
-module C25-Optimization-Challenge
+module C25OptimizationChallenge
 
 # Write your package code here.
 

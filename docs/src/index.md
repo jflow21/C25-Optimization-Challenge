@@ -1,15 +1,15 @@
 ```@meta
-CurrentModule = C25-Optimization-Challenge
+CurrentModule = C25OptimizationChallenge
 ```
 
-# C25-Optimization-Challenge
+# C25OptimizationChallenge
 
-Documentation for [C25-Optimization-Challenge](https://github.com/jflow21/C25-Optimization-Challenge.jl).
+Documentation for [C25OptimizationChallenge](https://github.com/jflow21/C25OptimizationChallenge.jl).
 
 ```@index
 
 ```
 
 ```@autodocs
-Modules = [C25-Optimization-Challenge]
+Modules = [C25OptimizationChallenge]
 ```

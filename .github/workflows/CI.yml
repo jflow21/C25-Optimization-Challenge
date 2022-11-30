@@ -54,6 +54,6 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using C25-Optimization-Challenge
-            DocMeta.setdocmeta!(C25-Optimization-Challenge, :DocTestSetup, :(using C25-Optimization-Challenge); recursive=true)
-            doctest(C25-Optimization-Challenge)'
+            using C25OptimizationChallenge
+            DocMeta.setdocmeta!(C25OptimizationChallenge, :DocTestSetup, :(using C25OptimizationChallenge); recursive=true)
+            doctest(C25OptimizationChallenge)'
