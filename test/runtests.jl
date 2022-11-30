@@ -3,7 +3,7 @@ using Aqua
 using Documenter
 using HashCode2014
 using JuliaFormatter
-
+using C25OptimizationChallenge
 
 DocMeta.setdocmeta!(C25OptimizationChallenge, :DocTestSetup, :(using C25OptimizationChallenge); recursive=true)
 
