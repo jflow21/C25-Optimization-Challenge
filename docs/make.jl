@@ -4,7 +4,7 @@ using Documenter
 DocMeta.setdocmeta!(C25-Optimization-Challenge, :DocTestSetup, :(using C25-Optimization-Challenge); recursive=true)
 
 makedocs(;
-    modules=[Optimization Challenge],
+    modules=[C25-Optimization-Challenge],
     authors="jacksonflowers <flowersj@mit.edu> and contributors",
     repo="https://github.com/jflow21/C25-Optimization-Challenge.jl/blob/{commit}{path}#{line}",
     sitename="C25-Optimization-Challenge.jl",
