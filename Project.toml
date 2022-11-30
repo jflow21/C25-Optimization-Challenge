@@ -1,0 +1,13 @@
+name = "Optimization Challenge"
+uuid = "15e64341-41c1-4f66-a67a-7a54df75a33e"
+authors = ["jacksonflowers <flowersj@mit.edu> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1.8"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
