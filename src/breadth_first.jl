@@ -12,7 +12,7 @@ The first of these prevents the algorithm from backtracking too much. The second
 function breadth_first(city::City)
     (; total_duration, nb_cars, starting_junction, streets) = city
     itineraries = Vector{Vector{Int}}(undef, nb_cars)
-    used_junctions = streets .== starting_junction
+    used_streets = falses(length(streets))
     for c in 1:nb_cars
         itinerary = [starting_junction]
         duration = 0
@@ -25,7 +25,7 @@ function breadth_first(city::City)
                 )
             ]
             candidates = [
-                (s, street) for (s, street) in candidates_repeat if !used_junctions[s]
+                (s, street) for (s, street) in candidates_repeat if !used_streets[s]
             ]
             if isempty(candidates) && isempty(candidates_repeat)
                 break
@@ -39,7 +39,7 @@ function breadth_first(city::City)
                 next_junction = HashCode2014.get_street_end(current_junction, street)
                 push!(itinerary, next_junction)
                 duration += street.duration
-                used_junctions[s] = true
+                used_streets[s] = true
             end
         end
         itineraries[c] = itinerary
