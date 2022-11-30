@@ -1,6 +1,6 @@
-using Optimization Challenge
+using OptimizationChallenge
 using Test
 
-@testset "Optimization Challenge.jl" begin
+@testset "C25-Optimization-Challenge.jl" begin
     # Write your tests here.
 end

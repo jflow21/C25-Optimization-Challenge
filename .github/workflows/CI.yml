@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-    tags: ['*']
+    tags: ["*"]
   pull_request:
 concurrency:
   # Skip intermediate builds: always.
@@ -18,8 +18,8 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - '1.8'
-          - 'nightly'
+          - "1.8"
+          - "nightly"
         os:
           - ubuntu-latest
         arch:
@@ -46,7 +46,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
         with:
-          version: '1'
+          version: "1"
       - uses: julia-actions/julia-buildpkg@v1
       - uses: julia-actions/julia-docdeploy@v1
         env:
@@ -54,6 +54,6 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using Optimization Challenge
-            DocMeta.setdocmeta!(Optimization Challenge, :DocTestSetup, :(using Optimization Challenge); recursive=true)
-            doctest(Optimization Challenge)'
+            using C25-Optimization-Challenge
+            DocMeta.setdocmeta!(C25-Optimization-Challenge, :DocTestSetup, :(using C25-Optimization-Challenge); recursive=true)
+            doctest(C25-Optimization-Challenge)'

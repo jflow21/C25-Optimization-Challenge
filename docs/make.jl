@@ -1,16 +1,16 @@
-using Optimization Challenge
+using C25-Optimization-Challenge
 using Documenter
 
-DocMeta.setdocmeta!(Optimization Challenge, :DocTestSetup, :(using Optimization Challenge); recursive=true)
+DocMeta.setdocmeta!(C25-Optimization-Challenge, :DocTestSetup, :(using C25-Optimization-Challenge); recursive=true)
 
 makedocs(;
     modules=[Optimization Challenge],
     authors="jacksonflowers <flowersj@mit.edu> and contributors",
-    repo="https://github.com/jflow21/Optimization Challenge.jl/blob/{commit}{path}#{line}",
-    sitename="Optimization Challenge.jl",
+    repo="https://github.com/jflow21/C25-Optimization-Challenge.jl/blob/{commit}{path}#{line}",
+    sitename="C25-Optimization-Challenge.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://jflow21.github.io/Optimization Challenge.jl",
+        canonical="https://jflow21.github.io/C25-Optimization-Challenge.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -20,6 +20,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/jflow21/Optimization Challenge.jl",
+    repo="github.com/jflow21/C25-Optimization-Challenge.jl",
     devbranch="main",
 )
