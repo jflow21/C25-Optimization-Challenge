@@ -5,7 +5,12 @@ using HashCode2014
 using JuliaFormatter
 using C25OptimizationChallenge
 
-DocMeta.setdocmeta!(C25OptimizationChallenge, :DocTestSetup, :(using C25OptimizationChallenge); recursive=true)
+DocMeta.setdocmeta!(
+    C25OptimizationChallenge,
+    :DocTestSetup,
+    :(using C25OptimizationChallenge);
+    recursive=true,
+)
 
 @testset verbose = true "C25OptimizationChallenge.jl" begin
     @testset verbose = true "Code quality (Aqua.jl)" begin
@@ -27,6 +32,4 @@ DocMeta.setdocmeta!(C25OptimizationChallenge, :DocTestSetup, :(using C25Optimiza
         @test is_feasible(solution, city)
         @test total_distance(solution, city) >= total_distance(random_solution, city)
     end
-
-
 end

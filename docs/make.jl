@@ -1,7 +1,12 @@
 using C25OptimizationChallenge
 using Documenter
 
-DocMeta.setdocmeta!(C25OptimizationChallenge, :DocTestSetup, :(using C25OptimizationChallenge); recursive=true)
+DocMeta.setdocmeta!(
+    C25OptimizationChallenge,
+    :DocTestSetup,
+    :(using C25OptimizationChallenge);
+    recursive=true,
+)
 
 makedocs(;
     modules=[C25OptimizationChallenge],
@@ -14,12 +19,7 @@ makedocs(;
         edit_link="main",
         assets=String[],
     ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    pages=["Home" => "index.md"],
 )
 
-deploydocs(;
-    repo="github.com/jflow21/C25OptimizationChallenge.jl",
-    devbranch="main",
-)
+deploydocs(; repo="github.com/jflow21/C25OptimizationChallenge.jl", devbranch="main")
