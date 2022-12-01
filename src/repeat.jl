@@ -1,5 +1,5 @@
 """
-    repeat(city, method=breadth_first, num_times=100)
+    repeat(city, num_times, method)
 
 This function tries to find a good solution to the problem by repeatedly calling `method` and keeping the best solution found. This should result in improvements if `method` is randomized.
 """

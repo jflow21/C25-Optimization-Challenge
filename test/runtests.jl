@@ -30,7 +30,7 @@ DocMeta.setdocmeta!(
         random_solution = random_walk(city)
         solution = breadth_first(city)
         @test is_feasible(solution, city)
-        @test is_feasible(generate_solution(city, num_times=2), city)
+        @test is_feasible(generate_solution(city, 2), city)
         @test total_distance(solution, city) >= total_distance(random_solution, city)
     end
 end
