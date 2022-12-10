@@ -3,6 +3,6 @@
 
 Returns the speed of a street.
 """
-function speed(street::Street)
-    return street.distance / street.duration
+function speed(distance, duration)
+    return distance / duration
 end

@@ -5,4 +5,6 @@
 /docs/build/
 .CondaPkg
 .vscode
+*.txt
+sol2.txt
 sol.txt
