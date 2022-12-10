@@ -3,20 +3,23 @@
 
 This function selects the next node to traverse from a list of candidates by assigning each node a score and choosing the highest. The score is based on how `good` the best path starting with that node is.
 """
-function select_node(current, candidates, graph, visited_nodes, visited_edges, speeds)
+function select_node(
+    current, candidates, graph, visited_nodes, visited_edges, speeds; max_depth=5
+)
     # return rand(candidates)
-    depth = 13
     best_so_far = 0
     best_node = 0
     for neighbor in candidates
         edge = (current, neighbor)
         already_visited_node = visited_nodes[neighbor]
         already_visited_edge = edge in visited_edges
-        score = already_visited_edge ? 0 : speeds[edge] * (depth + 1)
+        score = already_visited_edge ? 0 : speeds[edge] * (max_depth + 1)
         # traverse edge
         visited_nodes[neighbor] = true
         push!(visited_edges, edge)
-        score += partial_dfs(graph, neighbor, depth, visited_nodes, visited_edges, speeds)
+        score += partial_dfs(
+            graph, neighbor, max_depth, visited_nodes, visited_edges, speeds
+        )
         # un-traverse edge
         visited_nodes[neighbor] = already_visited_node
         already_visited_edge || pop!(visited_edges, edge)
@@ -28,7 +31,6 @@ function select_node(current, candidates, graph, visited_nodes, visited_edges, s
     end
     return best_node
 end
-
 
 """
     partial_dfs(graph, node, depth, visited_nodes, visited_edges, distances, times)
@@ -49,7 +51,9 @@ function partial_dfs(graph, node::Int, depth::Int, visited_nodes, visited_edges,
         # traverse edge
         visited_nodes[neighbor] = true
         push!(visited_edges, edge)
-        score += partial_dfs(graph, neighbor, depth - 1, visited_nodes, visited_edges, speeds)
+        score += partial_dfs(
+            graph, neighbor, depth - 1, visited_nodes, visited_edges, speeds
+        )
         # un-traverse edge
         visited_nodes[neighbor] = already_visited_node
         already_visited_edge || pop!(visited_edges, edge)

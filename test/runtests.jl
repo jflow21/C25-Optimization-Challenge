@@ -27,10 +27,13 @@ DocMeta.setdocmeta!(
 
     @testset verbose = true "Large instance" begin
         city = read_city()
+        city_problem = read_city_problem()
         random_solution = random_walk(city)
-        solution = breadth_first(city)
+        solution, dist = generate_solution()
         @test is_feasible(solution, city)
-        @test is_feasible(generate_solution(city, 2), city)
-        @test total_distance(solution, city) >= total_distance(random_solution, city)
+        @test C25OptimizationChallenge.total_distance(solution) == dist
+        @test dist == breadth_first(city_problem)[2]
+        @test dist <= generate_bound(city_problem)
+        # @test C25OptimizationChallenge.speed(1, 2) = 1 / 2
     end
 end

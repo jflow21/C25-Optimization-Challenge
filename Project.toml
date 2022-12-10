@@ -9,7 +9,9 @@ HashCode2014 = "7bbed249-721d-42ac-b1f6-7cf884be0fbe"
 SimpleWeightedGraphs = "47aef6b3-ad0c-573a-a1e2-d07658019622"
 
 [compat]
+Graphs = "^1.0.0"
 HashCode2014 = "0.1"
+SimpleWeightedGraphs = "^1.0.0"
 julia = "1.8"
 
 [extras]

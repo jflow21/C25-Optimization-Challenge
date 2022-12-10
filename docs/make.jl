@@ -19,7 +19,12 @@ makedocs(;
         edit_link="main",
         assets=String[],
     ),
-    pages=["Home" => "index.md"],
+    pages=[
+        "Home" => "index.md",
+        "Algorithm" => "algorithm.md",
+        "Implementation" => "implementation.md",
+        "Bounds" => "bound.md",
+    ],
 )
 
 deploydocs(; repo="github.com/jflow21/C25OptimizationChallenge.jl", devbranch="main")
