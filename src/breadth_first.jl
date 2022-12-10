@@ -44,7 +44,7 @@ end
 This function tries to find a good solution to the problem using a greedy approach with lookahead, using parallel computation of each of the car agendas.
 """
 function breadth_first_parallel(city::CityProblemInst; max_depth=5)
-    (; total_duration, nb_cars, starting_junction, distances, times) = city
+    (; total_duration, nb_cars, starting_junction, distances, times, speeds) = city
     g = city.graph
     itineraries = [[starting_junction] for i in 1:nb_cars]
     car_running = trues(nb_cars)
